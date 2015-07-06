@@ -1,0 +1,6 @@
+name: Fave Parts
+markdown: redcarpet
+highlighter: rouge
+
+# Server
+host: localhost

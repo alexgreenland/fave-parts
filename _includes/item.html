@@ -1,0 +1,8 @@
+<section>
+	<div class="item-author">{{ page.author }}</div>
+	<div class="item-title"><a href="{{ page.url }}">{{ page.title }}</a></div>
+	<i class="fa fa-spotify"></i>
+	{% for time in page.times %}
+		<a href="{{ page.spotify }}#{{ time }}">{{ time }}</a>
+	{% endfor %}
+</section>
