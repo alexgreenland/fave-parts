@@ -1,6 +1,6 @@
 name: Fave Parts
 markdown: redcarpet
-highlighter: rouge
+highlighter: pygments
 
 # Server
 host: localhost
