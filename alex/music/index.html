@@ -1,0 +1,16 @@
+---
+layout: default
+title: Alex's Favourite Music Sequences
+---
+<section>
+	<h2>{{ page.title }}</h2>
+	<p class="lead">
+		<i class="fa fa-twitter"></i>
+		<a href="https://twitter.com/alexphoenix">alexphoenix</a>
+		<i class="fa fa-globe"></i>
+		<a href="http://ajrg.co">ajrg.co</a>
+	</p>
+</section>
+{% for post in site.posts %}
+	{{ post.content }}
+{% endfor %}
