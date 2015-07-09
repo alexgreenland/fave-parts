@@ -5,5 +5,9 @@
 	{% for time in page.times %}
 		<a href="{{ page.spotify }}#{{ time }}">{{ time }}</a>{% if forloop.last == false %} &middot; {% endif %}
 	{% endfor %}
-	<div class="text-muted">Discovered {{ page.discovered | date_to_long_string }}</div>
+	<div class="text-muted">
+		Discovered {{ page.discovered | date_to_long_string }}
+		&middot;
+		{{ page.categories.last }}
+	</div>
 </section>
