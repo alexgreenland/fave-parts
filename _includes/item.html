@@ -3,6 +3,7 @@
 	<div class="item-title"><a href="{{ page.url }}">{{ page.title }}</a></div>
 	<i class="fa fa-spotify"></i>
 	{% for time in page.times %}
-		<a href="{{ page.spotify }}#{{ time }}">{{ time }}</a>
+		<a href="{{ page.spotify }}#{{ time }}">{{ time }}</a>{% if forloop.last == false %} &middot; {% endif %}
 	{% endfor %}
+	<div class="text-muted">Discovered {{ page.discovered | date_to_long_string }}</div>
 </section>

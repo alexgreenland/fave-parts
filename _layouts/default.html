@@ -8,7 +8,7 @@
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         
-        <link href="//fonts.googleapis.com/css?family=News+Cycle:400,700|Playfair+Display:400,700,900|Abril+Fatface|Cinzel+Decorative:900" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=News+Cycle:400,700|Playfair+Display:400,700,900" rel="stylesheet" type="text/css">
         
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -19,7 +19,7 @@
         <a href="#content" class="sr-only">Skip to main content</a>
 		<nav>
 			<div class="container">
-				<h1><a href="/">Fave Parts</a></h1>
+				<h1><a href="/">{{ site.name }}</a></h1>
 			</div>
 		</nav>
 		<main role="main" class="home container" id="content">
@@ -27,12 +27,12 @@
         </main>
         <footer>
             <div class="container">
-				<p>
-					&copy; {{ site.time | date: '%Y' }} Fave Parts
-				</p>
-				<p class="text-muted">
-					Trademarks are the property of their respective owners.
-				</p>
+				<div>
+					&copy; {{ site.time | date: '%Y' }} {{ site.name }}
+				</div>
+				<div class="text-muted">
+					Contributors' sequence listings <a href="https://creativecommons.org/licenses/by/3.0/">CC-BY-3.0</a>. Trademarks are the property of their respective owners.
+				</div>
             </div>
         </footer>
 		<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
