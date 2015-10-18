@@ -1,0 +1,31 @@
+---
+layout: default
+contributor: ajrg
+title: Hot Parts
+---
+<section>
+	<div class="row">
+		<div class="col-xs-2">
+			<h2>
+				<span class="text-muted">@</span>{{ page.contributor }}
+			</h2>
+		</div>
+		<div class="col-xs-10 text-right heading-adjacent">
+			<p class="lead">
+				<i class="fa fa-twitter"></i>
+				<a href="https://twitter.com/alexphoenix"><span class="text-muted">@</span>alexphoenix</a>
+				<i class="fa fa-globe"></i>
+				<a href="http://ajrg.co">ajrg.co</a>
+			</p>
+		</div>
+	</div>
+	<h2>{{ page.title }}</h2>
+
+</section>
+{% assign sortedPosts = site.posts | sort: 'daysort' %}
+{% assign sortedPosts2 = sortedPosts | sort: 'date' %}
+{% for post in sortedPosts2 reversed %}
+	{% if post.categories.first == page.contributor %}
+	{{ post.content }}
+	{% endif %}
+{% endfor %}
