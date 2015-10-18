@@ -1,6 +1,11 @@
 <section>
 	<div class="item-author">{{ page.author }}</div>
 	<div class="item-title"><a href="{{ page.url }}">{{ page.title }}</a></div>
+	<div class="item-comments">
+		{% for comment in page.comments %}
+			{{ comment | replace: '(Y)', '<i class="fa fa-thumbs-o-up"></i>'}}
+		{% endfor %}
+	</div>
 	<i class="fa fa-spotify"></i>
 	{% for time in page.times %}
 		<a href="{{ page.spotify }}#{{ time }}">{{ time }}</a>{% if forloop.last == false %} &middot; {% endif %}
@@ -8,6 +13,6 @@
 	<div class="text-muted">
 		Discovered {{ page.discovered | date_to_long_string }}
 		&middot;
-		{{ page.categories.last }}
+		#{{ page.categories.last }}
 	</div>
 </section>

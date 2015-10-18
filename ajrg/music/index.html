@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Alex's Favourite Music Sequences
+contributor: ajrg
+title: Alex Greenland's Favourite Music Motifs
 ---
 <section>
 	<h2>{{ page.title }}</h2>
@@ -11,6 +12,10 @@ title: Alex's Favourite Music Sequences
 		<a href="http://ajrg.co">ajrg.co</a>
 	</p>
 </section>
-{% for post in site.posts %}
+{% assign sortedPosts = site.posts | sort: 'daysort' %}
+{% assign sortedPosts2 = sortedPosts | sort: 'date' %}
+{% for post in sortedPosts2 reversed %}
+	{% if post.categories.first == page.contributor %}
 	{{ post.content }}
+	{% endif %}
 {% endfor %}
